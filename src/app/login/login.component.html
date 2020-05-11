@@ -1,0 +1,15 @@
+<GridLayout rows="*, auto, *" columns="*">
+    <!-- p: padding, x: horizontal, 20: 20px -->
+    <StackLayout row="1" col="0" class="p-x-20">
+        <form [formGroup]="loginForm">
+            <label text="Username"></label>
+            <TextField hint="Enter your username" text="" formControlName="username"></TextField>
+            <Label class="footnote" text="username is required" [visibility]="username.dirty && username.invalid ? 'visible' : 'collapse'"></Label>
+            <label text="Password"></label>
+            <TextField hint="Enter your password" text="" formControlName="password"></TextField>
+            <Label class="footnote" text="password is required" [visibility]="password.dirty && password.invalid ? 'visible' : 'collapse'"></Label>
+            <Button class="-primary" text="Login" (tap)="login()" [isEnabled]="!loginForm.invalid"></Button>
+            <Button class="-outline" text="Register" (tap)="register()" [isEnabled]="!loginForm.invalid"></Button>
+        </form>
+    </StackLayout>
+</GridLayout>

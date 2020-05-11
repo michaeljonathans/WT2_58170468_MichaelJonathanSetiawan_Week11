@@ -1,0 +1,6 @@
+@import "~@nativescript/theme/css/core.css";
+@import "~@nativescript/theme/css/purple.css";
+
+Label {
+    font-size: 18;
+}
